@@ -33,24 +33,34 @@ The popup gives you a toggle to pause/resume redirects and a list of learned cus
 
 ## Install
 
+Pre-built packages are available in the [`dist/`](dist/) directory and as [GitHub Releases](https://github.com/anticapitalistcomputerclub/kill-yr-substack/releases).
+
 ### Chrome / Chromium
 
 **From CRX:**
-1. Go to `chrome://extensions/`
-2. Enable **Developer mode** (top right)
-3. Drag `kill-yr-substack.crx` onto the page
+1. Download `dist/kill-yr-substack.crx`
+2. Go to `chrome://extensions/`
+3. Enable **Developer mode** (top right)
+4. Drag `kill-yr-substack.crx` onto the page
 
 **From ZIP (unpacked):**
-1. Extract `kill-yr-substack-X.Y.Z.zip`
+1. Download and extract `dist/kill-yr-substack-X.Y.Z.zip`
 2. Go to `chrome://extensions/`
 3. Enable **Developer mode** (top right)
 4. Click **Load unpacked** and select the extracted folder
 
+**From source:**
+1. Go to `chrome://extensions/`
+2. Enable **Developer mode** (top right)
+3. Click **Load unpacked** and select this repository directory
+
 ### Firefox
 
-1. Go to `about:addons`
-2. Click the gear icon, select **Install Add-on From File...**
-3. Select `kill-yr-substack-X.Y.Z.xpi`
+**From XPI:**
+1. Download `dist/kill-yr-substack-X.Y.Z.xpi`
+2. Go to `about:addons`
+3. Click the gear icon, select **Install Add-on From File...**
+4. Select the downloaded XPI file
 
 ## Permissions
 

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": { "regexSubstitution": "https://archive.is/?run=1&url=\\0" }
+    },
+    "condition": {
+      "regexFilter": "^https?://[^/]*\\.substack\\.com/p/.*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": { "regexSubstitution": "https://archive.is/?run=1&url=\\0" }
+    },
+    "condition": {
+      "regexFilter": "^https?://substack\\.com/@.*",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]
