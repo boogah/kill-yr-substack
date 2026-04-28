@@ -1,0 +1,26 @@
+[
+  {
+    "id": 3,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": { "regexSubstitution": "https://ghostarchive.org/search?term=\\0" }
+    },
+    "condition": {
+      "regexFilter": "^https?://[^/]*\\.substack\\.com/p/.*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": { "regexSubstitution": "https://ghostarchive.org/search?term=\\0" }
+    },
+    "condition": {
+      "regexFilter": "^https?://substack\\.com/@.*",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]

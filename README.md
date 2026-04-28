@@ -1,6 +1,6 @@
 # Kill Yr Substack
 
-A browser extension that redirects Substack articles to `archive.is`. Works on `*.substack.com` as well as custom domains.
+A browser extension that redirects Substack articles to an archiving service of your choice. Works on `*.substack.com` as well as custom domains.
 
 [Why does this exist?](https://jasoncosper.com/kill-yr-substack/)
 
@@ -30,6 +30,18 @@ The first time you hit a Substack with a custom domain, the page has to load so 
 Hit any of those and the page redirects to `archive.is`. The domain gets cached and promoted to Tier 2 for next time.
 
 The popup gives you a toggle to pause/resume redirects and a list of learned custom domains. You can remove individual domains if something gets flagged incorrectly.
+
+## Picking Your Archive Service
+
+Kill Yr Substack 1.2.x adds a preference for where its redirects land. `archive.is` (the default) or Ghost Archive. To switch, head to the options page (`chrome://extensions` on Chromium, `about:addons` on Firefox), find Kill Yr Substack, and open preferences.
+
+Why offer the choice? Some folks have an understandable issue with `archive.is` after [the maintainer DDoSed a blog that was investigating the site's ownership](https://arstechnica.com/tech-policy/2026/02/wikipedia-might-blacklist-archive-today-after-site-maintainer-ddosed-a-blog/). Their behavior is nasty and I don't agree with it.
+
+`archive.is` stays the default tho. It's the most seamless link-to-archived-page experience I've come across. Just one click. And if the page has never been captured before the site grabs it on the spot.
+
+Ghost Archive gets close. It searches for the URL first, and if nothing's been archived it shows an "Archive it now?" button. One extra click, but you still (eventually) get to where you were trying to go.
+
+Pick whichever option makes you feel less gross.
 
 ## Install
 

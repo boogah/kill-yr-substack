@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kill Yr Substack Options</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 24px;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    color: #1a1a1a;
+    background: #fff;
+  }
+
+  h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .option-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .option {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .option input[type="radio"] {
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  .option label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+  }
+
+  .option-title {
+    font-weight: 500;
+  }
+
+  .option-description {
+    font-size: 13px;
+    color: #666;
+  }
+
+  .actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    background: #fff;
+    color: #1a1a1a;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #f5f5f5;
+  }
+
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .save-btn {
+    background: #16a34a;
+    color: #fff;
+    border-color: #16a34a;
+  }
+
+  .save-btn:hover {
+    background: #15803d;
+    border-color: #15803d;
+  }
+
+  .saved-msg {
+    font-size: 13px;
+    color: #16a34a;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .saved-msg.show {
+    opacity: 1;
+  }
+</style>
+</head>
+<body>
+  <h1>Kill Yr Substack Options</h1>
+
+  <div class="option-group">
+    <div class="option">
+      <input type="radio" name="archiveService" id="archive-is" value="archive.is">
+      <label for="archive-is">
+        <span class="option-title">archive.is (default)</span>
+        <span class="option-description">One-click redirect. Auto-archives if page hasn't been captured.</span>
+      </label>
+    </div>
+
+    <div class="option">
+      <input type="radio" name="archiveService" id="ghostarchive" value="ghostarchive">
+      <label for="ghostarchive">
+        <span class="option-title">Ghost Archive</span>
+        <span class="option-description">Search first, then shows "Archive it now?" button if not found.</span>
+      </label>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button class="save-btn" id="save">Save</button>
+    <span class="saved-msg" id="saved">Saved!</span>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

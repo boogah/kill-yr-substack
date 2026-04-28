@@ -55,3 +55,9 @@ clearBtn.addEventListener('click', function () {
     updateUI({ enabled: toggle.checked, cachedDomains: [] });
   });
 });
+
+// settings link
+document.getElementById('settings-link').addEventListener('click', function (e) {
+  e.preventDefault();
+  chrome.runtime.openOptionsPage();
+});

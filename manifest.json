@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Kill Yr Substack",
-  "version": "1.1.4",
-  "description": "Automatically redirects Substack articles (including custom domains) to archive.is.",
+  "version": "1.2.1",
+  "description": "Automatically redirects Substack articles (including custom domains) to an archiving service of your choice.",
   "permissions": [
     "declarativeNetRequest",
     "declarativeNetRequestFeedback",
@@ -18,8 +18,17 @@
         "id": "substack_rules",
         "enabled": true,
         "path": "rules.json"
+      },
+      {
+        "id": "substack_rules_ghostarchive",
+        "enabled": false,
+        "path": "rules-ghostarchive.json"
       }
     ]
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
   },
   "background": {
     "service_worker": "background.js",
@@ -36,7 +45,8 @@
         "https://archive.li/*",
         "https://archive.md/*",
         "https://archive.ph/*",
-        "https://archive.vn/*"
+        "https://archive.vn/*",
+        "https://ghostarchive.org/*"
       ],
       "js": ["content.js"],
       "run_at": "document_idle"
